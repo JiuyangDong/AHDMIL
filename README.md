@@ -1,5 +1,5 @@
 # AHDMIL: Asymmetric Hierarchical Distillation Multi-Instance Learning for Fast and Accurate Whole-Slide Image Classiffcation
-![Model Architecture](Framework.pdf)
+![Model Architecture](Framework.png)
 
 ## Training & Validation & Testing
 
