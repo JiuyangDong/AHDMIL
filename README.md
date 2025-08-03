@@ -17,6 +17,33 @@ python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fol
     --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
 ```
 
+### For the TCGA-NSCLC dataset
+```shell
+python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+    --label_frac 1.00 --init_type xaiver --model AHDMIL \
+    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
+    --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
+    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+```
+
+### For the TCGA-BRCA dataset
+```shell
+python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+    --label_frac 1.00 --init_type xaiver --model AHDMIL \
+    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
+    --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
+    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+```
+
+### For the TCGA-RCC dataset
+```shell
+python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+    --label_frac 1.00 --init_type xaiver --model AHDMIL \
+    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
+    --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
+    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+```
+
 🔁 **Pretrained Backbone from Previous Work**
 
 To apply our method to your own dataset, you will need to train a DMIN model following the instructions in our [previous repository](https://github.com/JiuyangDong/HDMIL). 
