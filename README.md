@@ -2,7 +2,9 @@
 ![Model Architecture](Framework.png)
 
 This repository is an **extended version** of our previous conference paper published at [CVPR 2025](https://openaccess.thecvf.com/content/CVPR2025/html/Dong_Fast_and_Accurate_Gigapixel_Pathological_Image_Classification_with_Hierarchical_Distillation_CVPR_2025_paper.html).  
+
 The current version includes additional experiments, a redesigned architecture, and deeper analysis.  
+
 If you previously used the CVPR version, we highly encourage switching to this updated version.
 
 ## How to use: training & validation & testing scripts
@@ -17,9 +19,11 @@ python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fol
 
 🔁 **Pretrained Backbone from Previous Work**
 
-This project uses the pretrained DMIN model from our CVPR 2024 work.  
-You can download the weights from [old project link].
-After downloading, please place the model file according to the `pretrain_dir` path specified in the script.
+To apply our method to your own dataset, you will need to train a DMIN model following the instructions in our [previous repository](https://github.com/JiuyangDong/HDMIL). 
+
+Once trained, place the resulting checkpoint at the location specified by "pretrain_dir".
+
+
 
 
 © 2025 Dong Jiuyang. This code is released under the GPLv3 license and is intended for non-commercial academic research only.
