@@ -5,7 +5,7 @@ import random
 import os
 import numpy as np
 import logging
-from Joint import HADMIL as MIL   
+from Joint import AHDMIL as MIL   
 
 def parse_args_and_save():
     parser = argparse.ArgumentParser(description='')
