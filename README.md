@@ -19,29 +19,29 @@ python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fol
 
 ### For the TCGA-NSCLC dataset
 ```shell
-python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+python run.py --pretrain ResNet50_ImageNet --dataset TCGA-NSCLC --gpu_id 1 --fold 10 \
     --label_frac 1.00 --init_type xaiver --model AHDMIL \
-    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
-    --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
-    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+    --pretrain_dir experiments/N10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=16/lr=3e-05_maskratio=0.7/ckpts/ \
+    --mask_ratio 0.7 --degree 16 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
+    --num_moe 2 --LIPN_ema 0.0 --attn_ratio 0.1
 ```
 
 ### For the TCGA-BRCA dataset
 ```shell
-python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+python run.py --pretrain ResNet50_ImageNet --dataset TCGA-BRCA --gpu_id 1 --fold 10 \
     --label_frac 1.00 --init_type xaiver --model AHDMIL \
-    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
-    --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
-    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+    --pretrain_dir experiments/B10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.7/ckpts/ \
+    --mask_ratio 0.7 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
+    --num_moe 2 --LIPN_ema 0.0 --attn_ratio 0.0
 ```
 
 ### For the TCGA-RCC dataset
 ```shell
-python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fold 10 \
+python run.py --pretrain ResNet50_ImageNet --dataset TCGA-RCC --gpu_id 1 --fold 10 \
     --label_frac 1.00 --init_type xaiver --model AHDMIL \
-    --pretrain_dir experiments/C10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
+    --pretrain_dir experiments/R10/Res50/init_xaiver/wrong_label_rate=0.0/label_frac=1.0/model=v4_degree=12/lr=0.0003_maskratio=0.6/ckpts/ \
     --mask_ratio 0.6 --degree 12 --lwc mbv4t --distill_loss l1 --LIPN_lr 1e-5 --DMIN_lr 1e-5 \
-    --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
+    --num_moe 2 --LIPN_ema 0.0 --attn_ratio 0.0
 ```
 
 🔁 **Pretrained Backbone from Previous Work**
