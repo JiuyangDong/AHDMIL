@@ -15,5 +15,11 @@ python run.py --pretrain ResNet50_ImageNet --dataset Camelyon16 --gpu_id 1 --fol
     --num_moe 2 --LIPN_ema 0.2 --attn_ratio 0.4
 ```
 
+🔁 **Pretrained Backbone from Previous Work**
+
+This project uses the pretrained DMIN model from our CVPR 2024 work.  
+You can download the weights from [old project link].
+After downloading, please place the model file according to the `pretrain_dir` path specified in the script.
+
 
 © 2025 Dong Jiuyang. This code is released under the GPLv3 license and is intended for non-commercial academic research only.
